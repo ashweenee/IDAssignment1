@@ -4,11 +4,6 @@ body {
     padding: 0;
     color: #ffffff;
     background-color: #122a34;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    height: 100vh;
-    overflow: hidden;
   }
   
   header {
