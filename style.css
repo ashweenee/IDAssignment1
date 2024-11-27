@@ -2,16 +2,23 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    color: #333;
+    color: #ffffff;
+    background-color: #122a34;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
   }
   
   header {
     display: flex;
+    width: 100%;
     justify-content: space-between;
     align-items: center;
-    background: #111;
+    background-color: #122a34;
     color: #fff;
-    padding: 10px 20px;
+    padding: 0px 40px;
   }
   
   header .logo {
@@ -27,7 +34,7 @@ body {
   
   header .menu a {
     text-decoration: none;
-    color: #fff;
+    color: #ffffff;
     transition: color 0.3s;
   }
   
@@ -38,7 +45,7 @@ body {
   .hero {
     background: url('hero-image.jpg') no-repeat center center/cover;
     text-align: center;
-    color: #fff;
+    color: rgb(255, 255, 255);
     padding: 100px 20px;
   }
   
@@ -73,4 +80,3 @@ body {
     text-align: center;
     padding: 20px;
   }
-  
