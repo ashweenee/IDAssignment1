@@ -1,0 +1,82 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #2a2d3a;
+    color: #fff;
+    overflow: hidden;
+  }
+  
+  header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #122a34;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    z-index: 1000;
+  }
+  
+  header .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #fff;
+  }
+  
+  header .menu {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+  }
+  
+  header .menu li a {
+    text-decoration: none;
+    color: #fff;
+    transition: color 0.3s ease;
+  }
+  
+  header .menu li a:hover {
+    color: #ffd700;
+  }
+  
+  .slideshow-container {
+    margin-top: 60px; /* Prevents overlap with header */
+    width: 100%;
+    height: calc(100vh - 60px); /* Adjusts for the header height */
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .slideshow {
+    width: 100%;
+    height: 100%;
+    display: flex;
+  }
+  
+  .slide {
+    min-width: 100%;
+    height: 100%;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    transition: transform 0.5s ease;
+  }
+  
+  .slide.active {
+    display: flex;
+    opacity: 1;
+  }
+  
+  .slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }

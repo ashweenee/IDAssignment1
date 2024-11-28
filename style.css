@@ -7,13 +7,16 @@ body {
   }
   
   header {
-    display: flex;
+    position: fixed;
+    top: 0;
+    left: 0;
     width: 100%;
+    background-color: #122a34;
+    display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #122a34;
-    color: #fff;
-    padding: 0px 40px;
+    padding: 10px 20px;
+    z-index: 1000;
   }
   
   header .logo {
@@ -74,4 +77,14 @@ body {
     color: #fff;
     text-align: center;
     padding: 20px;
+  }
+  
+  .slideshow {
+    transition: background-color 0.5s ease;
+  }
+  .slide {
+    transition: color 0.5s ease;
+  }
+  .progress-bar {
+    transition: background-color 0.5s ease;
   }
