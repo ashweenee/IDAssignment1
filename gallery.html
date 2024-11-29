@@ -5,12 +5,12 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>DAY6 | Official Website</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="gallery.css">
 </head>
 
 <body>
   <header>
-    <div class="logo">DAY6</div>
+    <a href="homepage.html" class="logo">DAY6</a>
     <nav>
       <ul class="menu">
         <li><a href="about.html">About</a></li>
@@ -22,22 +22,50 @@
       </ul>
     </nav>
   </header>
-
-  <div class="slideshow-container">
-    <div class="slideshow">
-      <div class="slide active">
-        <img src="pics\DOWOON-1-900x600.jpg" alt="Album 1">
+  <div class="gallery-container">
+    <div class="video-card">
+      <video src="videos/video1.mp4" controls></video>
+      <div class="video-overlay">
+        <h3>Music Video 1</h3>
+        <p>Check out our latest music video!</p>
       </div>
-      <div class="slide">
-        <img src="pics\SUNGJIN-1-900x600.jpg" alt="Album 2">
+    </div>
+    <div class="video-card">
+      <video src="videos/video2.mp4" controls></video>
+      <div class="video-overlay">
+        <h3>Concert Highlights</h3>
+        <p>Get a glimpse of our electrifying live performances.</p>
       </div>
-      <div class="slide">
-        <img src="pics\WONPIL-1-533x800.jpg" alt="Album 3">
+    </div>
+    <div class="video-card">
+      <video src="videos/video3.mp4" controls></video>
+      <div class="video-overlay">
+        <h3>Behind the Scenes</h3>
+        <p>Go behind the scenes with the band.</p>
+      </div>
+    </div>
+    <div class="video-card">
+      <video src="videos/video4.mp4" controls></video>
+      <div class="video-overlay">
+        <h3>Exclusive Interview</h3>
+        <p>Learn more about the band in this exclusive interview.</p>
+      </div>
+    </div>
+    <div class="video-card">
+      <video src="videos/video5.mp4" controls></video>
+      <div class="video-overlay">
+        <h3>Fan Reactions</h3>
+        <p>See how fans are reacting to our latest release.</p>
+      </div>
+    </div>
+    <div class="video-card">
+      <video src="videos/video6.mp4" controls></video>
+      <div class="video-overlay">
+        <h3>Behind the Lyrics</h3>
+        <p>Go deeper into the meaning behind our lyrics.</p>
       </div>
     </div>
   </div>
-
-  <script src="script.js"></script>
 </body>
 
 </html>

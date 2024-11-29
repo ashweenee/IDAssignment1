@@ -1,55 +1,58 @@
-const slides = document.querySelectorAll('.slide');
+const playButtons = document.querySelectorAll('.play-btn');
+const nextButtons = document.querySelectorAll('.next-btn');
+const prevButtons = document.querySelectorAll('.prev-btn');
 const progressBars = document.querySelectorAll('.progress-bar');
-const slideshow = document.querySelector('.slideshow');
-let currentIndex = 0;
-const duration = 5000; // 5 seconds per slide
+let currentIndexes = [0, 0, 0];
+let isPlaying = [false, false, false];
+let intervalIds = [null, null, null];
+let songs = [];
 
-// Function to extract and apply color scheme
-function applyColorsFromImage(imageElement) {
-  Vibrant.from(imageElement).getPalette().then((palette) => {
-    // Extract dominant colors
-    const primaryColor = palette.Vibrant.hex;
-    const secondaryColor = palette.Muted.hex;
+// Create Howl instances for each song
+songs.push(new Howl({ src: ['song1.mp3'] }));
+songs.push(new Howl({ src: ['song2.mp3'] }));
+songs.push(new Howl({ src: ['song3.mp3'] }));
 
-    // Apply colors to slideshow and progress bar
-    slideshow.style.backgroundColor = primaryColor;
-    slides[currentIndex].style.color = secondaryColor;
-    progressBars[currentIndex].style.backgroundColor = secondaryColor;
-  });
+function togglePlay(index) {
+  if (!isPlaying[index]) {
+    songs[index].play();
+    playButtons[index].innerHTML = '&#9208;'; // Pause symbol
+    intervalIds[index] = setInterval(() => {
+      progressBars[index].style.width = `${(songs[index].seek() / songs[index].duration()) * 100}%`;
+    }, 100);
+  } else {
+    songs[index].pause();
+    playButtons[index].innerHTML = '&#9654;'; // Play symbol
+    clearInterval(intervalIds[index]);
+  }
+  isPlaying[index] = !isPlaying[index];
 }
 
-// Show Slide with Dynamic Colors
-function showSlide(index) {
-  slides.forEach((slide, i) => {
-    slide.classList.remove('active');
-    progressBars[i].style.width = '0%';
-    if (i === index) {
-      slide.classList.add('active');
-      const img = slide.querySelector('.album-cover img');
-      applyColorsFromImage(img); // Apply colors dynamically
-      setTimeout(() => {
-        progressBars[i].style.width = '100%';
-      }, 50);
-    }
-  });
+function nextSong(index) {
+  togglePlay(index);
+  songs[index].stop();
+  currentIndexes[index] = 0;
+  progressBars[index].style.width = '0%';
+  index = (index + 1) % 3;
+  togglePlay(index);
 }
 
-// Slide Controls
-function nextSlide() {
-  currentIndex = (currentIndex + 1) % slides.length;
-  showSlide(currentIndex);
+function prevSong(index) {
+  togglePlay(index);
+  songs[index].stop();
+  currentIndexes[index] = 0;
+  progressBars[index].style.width = '0%';
+  index = (index - 1 + 3) % 3;
+  togglePlay(index);
 }
 
-function prevSlide() {
-  currentIndex = (currentIndex - 1 + slides.length) % slides.length;
-  showSlide(currentIndex);
-}
+playButtons.forEach((btn, index) => {
+  btn.addEventListener('click', () => togglePlay(index));
+});
 
-// Auto-transition slides
-setInterval(() => {
-  currentIndex = (currentIndex + 1) % slides.length;
-  showSlide(currentIndex);
-}, duration);
+nextButtons.forEach((btn, index) => {
+  btn.addEventListener('click', () => nextSong(index));
+});
 
-// Initialize first slide
-showSlide(currentIndex);
+prevButtons.forEach((btn, index) => {
+  btn.addEventListener('click', () => prevSong(index));
+});

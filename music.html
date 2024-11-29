@@ -10,66 +10,77 @@
 
 <body>
     <header>
-      <div class="logo">DAY6</div>
-      <nav>
-        <ul class="menu">
-          <li><a href="about.html">About</a></li>
-          <li><a href="music.html">Music</a></li>
-          <li><a href="merch.html">Merch</a></li>
-          <li><a href="tour.html">Tour</a></li>
-          <li><a href="gallery.html">Gallery</a></li>
-          <li><a href="contactUs.html">Contact Us</a></li>
-        </ul>
-      </nav>
+        <a href="homepage.html" class="logo">DAY6</a>
+        <nav>
+            <ul class="menu">
+                <li><a href="about.html">About</a></li>
+                <li><a href="music.html">Music</a></li>
+                <li><a href="merch.html">Merch</a></li>
+                <li><a href="tour.html">Tour</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="contactUs.html">Contact Us</a></li>
+            </ul>
+        </nav>
     </header>
 
-    <!-- Slideshow -->
-    <div class="slideshow-container">
-        <div class="slideshow">
-            <div class="slide active" id="slide1">
-                <div class="album-cover">
-                    <img src="album1.jpg" alt="The Runner Album">
-                </div>
-                <div class="song-info">
-                    <h3>The Runner</h3>
-                    <p>Foals</p>
-                </div>
-                <div class="progress-container">
-                    <div class="progress-bar"></div>
-                </div>
+    <div class="music-player-container">
+        <div class="music-player">
+            <div class="album-cover">
+                <img src="album1.jpg" alt="The Runner Album">
             </div>
-            <div class="slide" id="slide2">
-                <div class="album-cover">
-                    <img src="album2.jpg" alt="Ylang Ylang Album">
-                </div>
-                <div class="song-info">
-                    <h3>Ylang Ylang</h3>
-                    <p>KKJ</p>
-                </div>
-                <div class="progress-container">
-                    <div class="progress-bar"></div>
-                </div>
+            <div class="song-info">
+                <h3>The Runner</h3>
+                <p>Foals</p>
             </div>
-            <div class="slide" id="slide3">
-                <div class="album-cover">
-                    <img src="album3.jpg" alt="A Moment Apart Album">
-                </div>
-                <div class="song-info">
-                    <h3>A Moment Apart</h3>
-                    <p>ODESZA</p>
-                </div>
-                <div class="progress-container">
-                    <div class="progress-bar"></div>
-                </div>
+            <div class="progress-container">
+                <div class="progress-bar"></div>
             </div>
-
             <div class="controls">
-                <button onclick="prevSlide()">&#9664; Previous</button>
-                <button onclick="nextSlide()">Next &#9654;</button>
+                <button class="prev-btn">&#9664;</button>
+                <button class="play-btn">&#9654;</button>
+                <button class="next-btn">&#9654;</button>
             </div>
+            <audio id="song1" src="song1.mp3"></audio>
+        </div>
+        <div class="music-player">
+            <div class="album-cover">
+                <img src="album2.jpg" alt="Ylang Ylang Album">
+            </div>
+            <div class="song-info">
+                <h3>Ylang Ylang</h3>
+                <p>KKJ</p>
+            </div>
+            <div class="progress-container">
+                <div class="progress-bar"></div>
+            </div>
+            <div class="controls">
+                <button class="prev-btn">&#9664;</button>
+                <button class="play-btn">&#9654;</button>
+                <button class="next-btn">&#9654;</button>
+            </div>
+            <audio id="song2" src="song2.mp3"></audio>
+        </div>
+        <div class="music-player">
+            <div class="album-cover">
+                <img src="album3.jpg" alt="A Moment Apart Album">
+            </div>
+            <div class="song-info">
+                <h3>A Moment Apart</h3>
+                <p>ODESZA</p>
+            </div>
+            <div class="progress-container">
+                <div class="progress-bar"></div>
+            </div>
+            <div class="controls">
+                <button class="prev-btn">&#9664;</button>
+                <button class="play-btn">&#9654;</button>
+                <button class="next-btn">&#9654;</button>
+            </div>
+            <audio id="song3" src="song3.mp3"></audio>
         </div>
     </div>
 
+    <script src="https://unpkg.com/howler@2.2.3/dist/howler.min.js"></script>
     <script src="music.js"></script>
 </body>
 
