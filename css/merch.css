@@ -1,0 +1,224 @@
+
+/* Merch Page */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #2a525a;
+  color: #e0e4d8;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 5%;
+  background: linear-gradient(to bottom, rgba(29, 39, 20, 0.9), transparent);
+  z-index: 1000;
+  transition: all 0.3s ease;
+}
+
+.logo {
+  color: #e0e4d8;
+  text-decoration: none;
+  font-size: 1.5rem;
+  font-weight: bold;
+  letter-spacing: 2px;
+  z-index: 1100;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+}
+
+.menu {
+  display: flex;
+  list-style: none;
+  gap: 25px;
+  align-items: center;
+}
+
+.menu li a {
+  color: #e0e4d8;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: color 0.3s ease;
+}
+
+.menu li a:hover {
+  color: #9aa488;
+}
+
+.hamburger {
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+  z-index: 1100;
+  position: absolute;
+  top: 15px;
+  right: 20px;
+}
+
+.hamburger span {
+  width: 25px;
+  height: 3px;
+  background-color: #e0e4d8;
+  margin: 4px 0;
+  transition: 0.3s;
+}
+
+
+@media screen and (max-width: 768px) {
+  .hamburger {
+    display: flex;
+  }
+
+  .menu {
+    display: none;
+  }
+
+  nav.active .menu {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+  }
+}
+
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 120px 20px 40px;
+}
+
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.product-card {
+  background-color: #1d2714;
+  border-radius: 8px;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+.product-card:hover {
+  transform: scale(1.05);
+}
+
+.product-image-container {
+  position: relative;
+  width: 100%;
+  height: 350px;
+}
+
+.product-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: opacity 0.3s ease;
+}
+
+.product-image.back-image {
+  opacity: 0;
+}
+
+.product-card:hover .product-image.front-image {
+  opacity: 0;
+}
+
+.product-card:hover .product-image.back-image {
+  opacity: 1;
+}
+
+.product-details {
+  padding: 15px;
+  background-color: #9aa488;
+  color: #1d2714;
+}
+
+.product-details h3 {
+  margin-bottom: 10px;
+  font-size: 1.1rem;
+  color: #1d2714;
+}
+
+.product-details .price {
+  color:#1d2714;
+  margin-bottom: 10px;
+}
+
+.buy-button {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  background-color:#e0e4d8;
+  color: #1d2714;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.buy-button:hover {
+  background-color: #1d2714;
+  color: #e0e4d8;
+}
+
+footer {
+  background-color: #9aa488;
+  padding: 20px;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer-logo img {
+  max-width: 50px;
+}
+
+.footer-social {
+  display: flex;
+  gap: 20px;
+}
+
+.footer-social a {
+  color: #1d2714;
+  font-size: 1.5rem;
+  transition: color 0.3s ease;
+}
+
+.footer-social a:hover {
+  color: #e0e4d8;
+}
+
+@media (max-width: 768px) {
+  .footer-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .footer-social {
+    margin-top: 20px;
+  }
+}

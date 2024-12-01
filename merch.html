@@ -4,13 +4,14 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>DAY6 | Official Website</title>
-  <link rel="stylesheet" href="merch.css">
+  <title>DAY6 | Merch</title>
+  <link rel="stylesheet" href="css/merch.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 </head>
 
 <body>
   <header>
-    <a href="homepage.html" class="logo">DAY6</a>
+    <a href="index.html" class="logo">DAY6</a>
     <nav>
       <ul class="menu">
         <li><a href="about.html">About</a></li>
@@ -20,40 +21,57 @@
         <li><a href="gallery.html">Gallery</a></li>
         <li><a href="contactUs.html">Contact Us</a></li>
       </ul>
+      <div class="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
     </nav>
   </header>
 
   <main class="container">
     <div class="products-grid">
       <div class="product-card">
-        <img src="https://via.placeholder.com/350x350" alt="Album Merch">
+        <div class="product-image-container">
+          <img src="media/hooodiefront.png" alt="Hoodie Front" class="product-image front-image">
+          <img src="media/hoodieback.png" alt="Hoodie Back" class="product-image back-image">
+        </div>
         <div class="product-details">
-          <h3>Official Album Poster</h3>
-          <p class="price">$29.99</p>
+          <h3>DAY6 Hood Zip-up</h3>
+          <p class="price">$86.00</p>
           <button class="buy-button">Add to Cart</button>
         </div>
       </div>
       <div class="product-card">
-        <img src="https://via.placeholder.com/350x350" alt="T-Shirt">
+        <div class="product-image-container">
+          <img src="media/tshirtfront.png" alt="T-Shirt Front" class="product-image front-image">
+          <img src="media/tshirtback.png" alt="T-Shirt Back" class="product-image back-image">
+        </div>
         <div class="product-details">
-          <h3>Band Tour T-Shirt</h3>
-          <p class="price">$34.99</p>
+          <h3>DAY6 Tour T-Shirt</h3>
+          <p class="price">$42.00</p>
           <button class="buy-button">Add to Cart</button>
         </div>
       </div>
       <div class="product-card">
-        <img src="https://via.placeholder.com/350x350" alt="Hoodie">
+        <div class="product-image-container">
+          <img src="media/fourevergreen.png" alt="Album Green" class="product-image front-image">
+          <img src="media/foureverbrown.png" alt="Album Brown" class="product-image back-image">
+        </div>
         <div class="product-details">
-          <h3>Concert Hoodie</h3>
-          <p class="price">$49.99</p>
+          <h3>DAY6 8th Album Fourever</h3>
+          <p class="price">$16.02</p>
           <button class="buy-button">Add to Cart</button>
         </div>
       </div>
       <div class="product-card">
-        <img src="https://via.placeholder.com/350x350" alt="Photobook">
+        <div class="product-image-container">
+          <img src="media/plushies.png" alt="Plushies" class="product-image front-image">
+          <img src="media/plushies.png" alt="Plushies Back" class="product-image back-image">
+        </div>
         <div class="product-details">
-          <h3>Limited Edition Photobook</h3>
-          <p class="price">$39.99</p>
+          <h3>DAY6 Denimalz Plush</h3>
+          <p class="price">$18.00</p>
           <button class="buy-button">Add to Cart</button>
         </div>
       </div>
@@ -61,8 +79,19 @@
   </main>
 
   <footer>
-    <p>&copy; 2024 DAY6 Official Merchandise. All Rights Reserved.</p>
-  </footer>
+    <div class="footer-content">
+        <div class="footer-logo">
+            <img src="media/day6-logo-19C02D5750-seeklogo.com.png" alt="DAY6 Logo">
+        </div>
+        <div class="footer-social">
+            <a href="https://www.instagram.com/day6official" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="https://twitter.com/DAY6Official" target="_blank"><i class="fab fa-twitter"></i></a>
+            <a href="https://www.youtube.com/user/DAY6Official" target="_blank"><i class="fab fa-youtube"></i></a>
+        </div>
+    </div>
+</footer>
+
+  <script src="js/mobileToggle.js"></script>
 </body>
 
 </html>

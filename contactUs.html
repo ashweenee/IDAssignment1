@@ -1,15 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>DAY6 | Contact Us</title>
-  <link rel="stylesheet" href="contactUs.css">
+  <link rel="stylesheet" href="css/contactUs.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 </head>
+
 <body>
   <header>
-    <a href="homepage.html" class="logo">DAY6</a>
+    <a href="index.html" class="logo">DAY6</a>
     <nav>
       <ul class="menu">
         <li><a href="about.html">About</a></li>
@@ -19,43 +21,62 @@
         <li><a href="gallery.html">Gallery</a></li>
         <li><a href="contactUs.html">Contact Us</a></li>
       </ul>
+      <div class="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
     </nav>
   </header>
 
-  <main>
-    <section class="contact-us">
+  <div class="contact-container">
+    <div class="contact-content">
       <div class="contact-header">
-        <div class="band-name-logo">DAY6</div>
         <h1>Contact Us</h1>
       </div>
 
-      <form id="contact-form">
-        <input type="text" id="name" placeholder="Name" required>
-        <input type="email" id="email" placeholder="Email" required>
-        <textarea id="message" placeholder="Message" required></textarea>
-        <button type="submit">Submit</button>
-      </form>
-
-      <div class="band-promotion">
-        <h2>Connect with DAY6</h2>
-        <div class="social-links">
-          <a href="https://www.facebook.com/DAY6Official" target="_blank">
-            <i class="fab fa-facebook-f"></i>
-          </a>
-          <a href="https://twitter.com/DAY6Official" target="_blank">
-            <i class="fab fa-twitter"></i>
-          </a>
-          <a href="https://www.instagram.com/day6official" target="_blank">
-            <i class="fab fa-instagram"></i>
-          </a>
-          <a href="https://www.youtube.com/user/DAY6Official" target="_blank">
-            <i class="fab fa-youtube"></i>
-          </a>
+      <form class="contact-form">
+        <div class="form-group">
+          <label for="name">Name</label>
+          <input type="text" id="name" name="name" required>
         </div>
-      </div>
-    </section>
-  </main>
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" required>
+        </div>
+        <div class="form-group">
+          <label for="subject">Subject</label>
+          <input type="text" id="subject" name="subject" required>
+        </div>
+        <div class="form-group">
+          <label for="message">Message</label>
+          <textarea id="message" name="message" required></textarea>
+        </div>
+        <button type="submit" class="submit-button">Send Message</button>
+      </form>
+    </div>
 
-  <script src="contactUs.js"></script>
+    <div class="contact-info">
+      <div class="contact-details">
+        <p><i class="fas fa-envelope"></i> legitemail123@gmail.com</p>
+        <p><i class="fas fa-phone"></i> +65 1234 5678</p>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <div class="footer-content">
+      <div class="footer-logo">
+        <img src="media/day6-logo-19C02D5750-seeklogo.com.png" alt="DAY6 Logo">
+      </div>
+      <div class="footer-social">
+        <a href="https://www.instagram.com/day6official" target="_blank"><i class="fab fa-instagram"></i></a>
+        <a href="https://twitter.com/DAY6Official" target="_blank"><i class="fab fa-twitter"></i></a>
+        <a href="https://www.youtube.com/user/DAY6Official" target="_blank"><i class="fab fa-youtube"></i></a>
+      </div>
+    </div>
+  </footer>
+  <script src="mobileToggle.js"></script>
 </body>
+
 </html>

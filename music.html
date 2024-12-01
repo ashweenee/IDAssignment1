@@ -4,13 +4,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DAY6 | Official Website</title>
-    <link rel="stylesheet" href="music.css">
+    <title>DAY6 | Music</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="css/music.css">
 </head>
 
 <body>
     <header>
-        <a href="homepage.html" class="logo">DAY6</a>
+        <a href="index.html" class="logo">DAY6</a>
         <nav>
             <ul class="menu">
                 <li><a href="about.html">About</a></li>
@@ -20,68 +21,83 @@
                 <li><a href="gallery.html">Gallery</a></li>
                 <li><a href="contactUs.html">Contact Us</a></li>
             </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+              </div>
         </nav>
     </header>
-
-    <div class="music-player-container">
-        <div class="music-player">
-            <div class="album-cover">
-                <img src="album1.jpg" alt="The Runner Album">
+    <div class="slideshow-container">
+        <div class="slide active">
+            <div class="slide-background" style="background-image: url('media/file.jpg');"></div>
+            <a class="navigation-arrow prev" onclick="changeSlide(-1)">
+                <i class="fas fa-chevron-left"></i>
+            </a>
+            <a class="navigation-arrow next" onclick="changeSlide(1)">
+                <i class="fas fa-chevron-right"></i>
+            </a>
+            <div class="video-overlay">
+                <div class="video-container">
+                    <iframe class="responsive-iframe"
+                        src="https://www.youtube.com/embed/jaIDoHHp-f4?si=GqIpAuNaSw0tWZbl" frameborder="0"
+                        allowfullscreen></iframe>
+                </div>
             </div>
-            <div class="song-info">
-                <h3>The Runner</h3>
-                <p>Foals</p>
+            <div class="slide-content">
+                <h1>Band Aid</h1>
+                <p>Dive into our latest album release!</p>
+                <button class="watch-btn">Watch Video</button>
             </div>
-            <div class="progress-container">
-                <div class="progress-bar"></div>
+            <div class="album-info">
+                <div class="album-details">
+                    <h2>Band Aid</h2>
+                    <p>Studio Album 2024</p>
+                </div>
+                <button class="listen-btn"
+                    data-link="https://open.spotify.com/embed/album/4X4EwXwRephm7JyukTWByX?utm_source=generator">Listen
+                    Now</button>
             </div>
-            <div class="controls">
-                <button class="prev-btn">&#9664;</button>
-                <button class="play-btn">&#9654;</button>
-                <button class="next-btn">&#9654;</button>
-            </div>
-            <audio id="song1" src="song1.mp3"></audio>
         </div>
-        <div class="music-player">
-            <div class="album-cover">
-                <img src="album2.jpg" alt="Ylang Ylang Album">
+        <div class="slide">
+            <div class="slide-background" style="background-image: url('media/foureverGrp.jpg');">
             </div>
-            <div class="song-info">
-                <h3>Ylang Ylang</h3>
-                <p>KKJ</p>
+            <a class="navigation-arrow prev" onclick="changeSlide(-1)">
+                <i class="fas fa-chevron-left"></i>
+            </a>
+            <a class="navigation-arrow next" onclick="changeSlide(1)">
+                <i class="fas fa-chevron-right"></i>
+            </a>
+            <div class="video-overlay">
+                <div class="video-container">
+                    <iframe class="responsive-iframe"
+                        src="https://www.youtube.com/embed/LXcsCkPXRrg?si=6GMQ_SUv-UJEqF8G" frameborder="0"
+                        allowfullscreen></iframe>
+                </div>
             </div>
-            <div class="progress-container">
-                <div class="progress-bar"></div>
+            <div class="slide-content">
+                <h1>Fourever</h1>
+                <p>Experience our emotional depth through this album!</p>
+                <button class="watch-btn">Watch Video</button>
             </div>
-            <div class="controls">
-                <button class="prev-btn">&#9664;</button>
-                <button class="play-btn">&#9654;</button>
-                <button class="next-btn">&#9654;</button>
+            <div class="album-info">
+                <div class="album-details">
+                    <h2>Fourever</h2>
+                    <p>Studio Album 2024</p>
+                </div>
+                <button class="listen-btn"
+                    data-link="https://open.spotify.com/embed/album/29pgfsXVV0cLsvfylWRZJ9?utm_source=generator">Listen
+                    Now</button>
             </div>
-            <audio id="song2" src="song2.mp3"></audio>
         </div>
-        <div class="music-player">
-            <div class="album-cover">
-                <img src="album3.jpg" alt="A Moment Apart Album">
-            </div>
-            <div class="song-info">
-                <h3>A Moment Apart</h3>
-                <p>ODESZA</p>
-            </div>
-            <div class="progress-container">
-                <div class="progress-bar"></div>
-            </div>
-            <div class="controls">
-                <button class="prev-btn">&#9664;</button>
-                <button class="play-btn">&#9654;</button>
-                <button class="next-btn">&#9654;</button>
-            </div>
-            <audio id="song3" src="song3.mp3"></audio>
+        <div class="slide-nav">
+            <div class="slide-dot active" data-slide="0"></div>
+            <div class="slide-dot" data-slide="1"></div>
         </div>
     </div>
 
-    <script src="https://unpkg.com/howler@2.2.3/dist/howler.min.js"></script>
-    <script src="music.js"></script>
+    <script src="js/music.js"></script>
+    <script src="js/mobileToggle.js"></script>
 </body>
 
 </html>
