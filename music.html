@@ -25,16 +25,18 @@
                 <span></span>
                 <span></span>
                 <span></span>
-              </div>
+            </div>
         </nav>
     </header>
+
     <div class="slideshow-container">
-        <div class="slide active">
+        <!-- Slide 1 -->
+        <div class="slide">
             <div class="slide-background" style="background-image: url('media/file.jpg');"></div>
-            <a class="navigation-arrow prev" onclick="changeSlide(-1)">
+            <a class="navigation-arrow prev" href="javascript:void(0);" onclick="changeSlide(-1)">
                 <i class="fas fa-chevron-left"></i>
             </a>
-            <a class="navigation-arrow next" onclick="changeSlide(1)">
+            <a class="navigation-arrow next" href="javascript:void(0);" onclick="changeSlide(1)">
                 <i class="fas fa-chevron-right"></i>
             </a>
             <div class="video-overlay">
@@ -59,13 +61,14 @@
                     Now</button>
             </div>
         </div>
+    
+        <!-- Slide 2 -->
         <div class="slide">
-            <div class="slide-background" style="background-image: url('media/foureverGrp.jpg');">
-            </div>
-            <a class="navigation-arrow prev" onclick="changeSlide(-1)">
+            <div class="slide-background" style="background-image: url('media/foureverGrp.jpg');"></div>
+            <a class="navigation-arrow prev" href="javascript:void(0);" onclick="changeSlide(-1)">
                 <i class="fas fa-chevron-left"></i>
             </a>
-            <a class="navigation-arrow next" onclick="changeSlide(1)">
+            <a class="navigation-arrow next" href="javascript:void(0);" onclick="changeSlide(1)">
                 <i class="fas fa-chevron-right"></i>
             </a>
             <div class="video-overlay">
@@ -90,11 +93,14 @@
                     Now</button>
             </div>
         </div>
+    
+        <!-- Slide navigation dots -->
         <div class="slide-nav">
             <div class="slide-dot active" data-slide="0"></div>
             <div class="slide-dot" data-slide="1"></div>
         </div>
     </div>
+    
 
     <script src="js/music.js"></script>
     <script src="js/mobileToggle.js"></script>

@@ -83,7 +83,6 @@ nav {
   transition: 0.3s;
 }
 
-
 @media screen and (max-width: 768px) {
   .hamburger {
     display: flex;
@@ -98,8 +97,40 @@ nav {
     flex-direction: column;
     gap: 30px;
   }
-}
 
+  header {
+    flex-direction: column;
+  }
+
+  .menu {
+    margin-top: 15px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .hero-content {
+    text-align: center;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .hero-content h1 {
+    font-size: 3rem;
+  }
+
+  .hero-content p {
+    font-size: 1.2rem;
+  }
+
+  .footer-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .footer-social {
+    margin-top: 20px;
+  }
+}
 
 main {
   padding-top: 100px;
@@ -237,32 +268,6 @@ footer {
   color: var(--text-color);
 }
 
-@media (max-width: 768px) {
-  .footer-content {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .footer-social {
-    margin-top: 20px;
-  }
-}
-
-button {
-  background-color: var(--accent-color);
-  color: var(--secondary-color);
-  border: none;
-  padding: 10px 20px;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-button:hover {
-  background-color: var(--primary-color);
-  color: var(--text-color);
-}
-
 @media (max-width: 1024px) {
   header {
     padding: 15px 20px;
@@ -287,37 +292,17 @@ button:hover {
   }
 }
 
-@media (max-width: 768px) {
-  header {
-    flex-direction: column;
-  }
+button {
+  background-color: var(--accent-color);
+  color: var(--secondary-color);
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
 
-  .menu {
-    margin-top: 15px;
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-
-  .hero-content {
-    text-align: center;
-    left: 50%;
-    transform: translateX(-50%);
-  }
-
-  .hero-content h1 {
-    font-size: 3rem;
-  }
-
-  .hero-content p {
-    font-size: 1.2rem;
-  }
-
-  .footer-content {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .footer-social {
-    margin-top: 20px;
-  }
+button:hover {
+  background-color: var(--primary-color);
+  color: var(--text-color);
 }

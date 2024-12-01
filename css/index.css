@@ -1,11 +1,8 @@
-
 :root {
-  --primary-color: #2a525a;
-  /* Main background */
-  --secondary-color: #1d2714;
-  /* Text and dark sections */
-  --accent-color: #9aa488;
-  /* Highlights, buttons */
+  --primary-color: #2a525a; /* Main background */
+  --secondary-color: #1d2714; /* Text and dark sections */
+  --accent-color: #9aa488; /* Highlights, buttons */
+  --text-color: #fff;
 }
 
 * {
@@ -17,9 +14,10 @@
 body {
   font-family: 'Arial', sans-serif;
   background-color: var(--primary-color);
-  color: #fff;
+  color: var(--text-color);
 }
 
+/* Header Styling */
 header {
   position: fixed;
   top: 0;
@@ -40,7 +38,6 @@ header {
   font-size: 1.5rem;
   font-weight: bold;
   letter-spacing: 2px;
-  z-index: 1100;
 }
 
 nav {
@@ -86,7 +83,6 @@ nav {
   transition: 0.3s;
 }
 
-
 @media screen and (max-width: 768px) {
   .hamburger {
     display: flex;
@@ -103,7 +99,7 @@ nav {
   }
 }
 
-
+/* Slideshow Styles */
 .slideshow-container {
   position: relative;
   width: 100vw;
@@ -135,7 +131,7 @@ nav {
   position: absolute;
   bottom: 10%;
   left: 5%;
-  color: #fff;
+  color: var(--text-color);
   text-align: left;
 }
 

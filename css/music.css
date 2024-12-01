@@ -1,15 +1,18 @@
+/* Reset Styles */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+/* Body */
 body {
   font-family: 'Arial', sans-serif;
   background-color: #2a525a;
   color: #e0e4d8;
 }
 
+/* Header */
 header {
   position: fixed;
   top: 0;
@@ -33,6 +36,7 @@ header {
   z-index: 1100;
 }
 
+/* Navigation */
 nav {
   display: flex;
   align-items: center;
@@ -75,23 +79,23 @@ nav {
   transition: 0.3s;
 }
 
-
 @media screen and (max-width: 768px) {
   .hamburger {
-    display: flex;
+      display: flex;
   }
 
   .menu {
-    display: none;
+      display: none;
   }
 
   nav.active .menu {
-    display: flex;
-    flex-direction: column;
-    gap: 30px;
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
   }
 }
 
+/* Slideshow Container */
 .slideshow-container {
   position: relative;
   width: 100vw;
@@ -127,6 +131,7 @@ nav {
   opacity: 1;
 }
 
+/* Slide Content */
 .slide-content {
   position: absolute;
   bottom: 10%;
@@ -159,6 +164,7 @@ nav {
   transition: background-color 0.3s ease;
 }
 
+/* Video Overlay */
 .video-overlay {
   position: absolute;
   top: 0;
@@ -191,6 +197,7 @@ nav {
   max-height: 80vh;
 }
 
+/* Navigation Arrows */
 .navigation-arrow {
   position: absolute;
   top: 50%;
@@ -216,6 +223,7 @@ nav {
   right: 20px;
 }
 
+/* Album Info */
 .album-info {
   position: absolute;
   bottom: 5%;
