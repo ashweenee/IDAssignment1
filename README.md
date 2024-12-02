@@ -1,4 +1,4 @@
-wireframe: https://www.figma.com/design/lY7Yx9yX0mU0Axu9cYMFZ0/ID_S10259249E_AshwiniiKrishnan_Assg1_wireframe?node-id=0-1&t=GfOUBXrViUAnfLG2-1
+Wireframe: https://www.figma.com/design/lY7Yx9yX0mU0Axu9cYMFZ0/ID_S10259249E_AshwiniiKrishnan_Assg1_wireframe?node-id=0-1&t=GfOUBXrViUAnfLG2-1
 
 Project Name: Stay Fourever Young
 This project is an interactive, responsive website dedicated to showcasing DAY6, a Korean music band. The site highlights their merchandise, tour dates, history, event booking options, and social media accounts. Its primary goal is to give fans and visitors a comprehensive look into the band's journey, from their beginnings to their current achievements, while offering features like merchandise browsing and tour date details.
@@ -11,7 +11,7 @@ For new users: Create an engaging and visually appealing platform that exposes u
 For event planners: Provide complete tour schedules and event planning information in a simple and understandable style.
 
 User Stories:
-Merchandise
+Merchandise 
 As a fan, I want to view the latest merchandise available so that I can purchase items and support the band.
 Band Information
 As a fan, I want to explore detailed information about the band's background so that I can connect with their journey and growth.

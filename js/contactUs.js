@@ -1,13 +1,13 @@
-document.addEventListener('DOMContentLoaded', () => {
-  const form = document.getElementById('contact-form');
+document.addEventListener('DOMContentLoaded', function() {
+  var form = document.getElementById('contact-form');
 
-  form.addEventListener('submit', (event) => {
+  form.addEventListener('submit', function(event) {
       event.preventDefault();
 
-      const nameInput = document.getElementById('name');
-      const emailInput = document.getElementById('email');
-      const subjectInput = document.getElementById('subject');
-      const messageInput = document.getElementById('message');
+      var nameInput = document.getElementById('name');
+      var emailInput = document.getElementById('email');
+      var subjectInput = document.getElementById('subject');
+      var messageInput = document.getElementById('message');
 
       // Perform form validation
       if (!nameInput.value || !emailInput.value || !subjectInput.value || !messageInput.value) {

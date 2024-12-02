@@ -1,6 +1,6 @@
-document.addEventListener('DOMContentLoaded', () => {
-    const slides = document.querySelectorAll('.slide');
-    let currentSlide = 0;
+document.addEventListener('DOMContentLoaded', function() {
+    var slides = document.querySelectorAll('.slide');
+    var currentSlide = 0;
 
     // Function to go to the next slide
     function nextSlide() {
