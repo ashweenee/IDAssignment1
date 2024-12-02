@@ -1,23 +1,27 @@
-/* About Page */
+/* -- Root Variables -- */
+/* Define custom colors used throughout the website */
 :root {
-  --primary-color: #2a525a;
-  --secondary-color: #1d2714;
-  --accent-color: #9aa488;
-  --text-color: #e0e4d8;
+  --primary-color: #2a525a; /* Background color */
+  --secondary-color: #1d2714; /* Darker color for contrast */
+  --accent-color: #9aa488; /* Highlight color for emphasis */
+  --text-color: #e0e4d8; /* Main text color */
 }
 
+/* -- Global Reset and Box Sizing -- */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+/* Set body background and text styles */
 body {
   font-family: 'Arial', sans-serif;
   background-color: var(--primary-color);
   color: var(--text-color);
 }
 
+/* -- Header Section -- */
 header {
   position: fixed;
   top: 0;
@@ -27,11 +31,12 @@ header {
   justify-content: space-between;
   align-items: center;
   padding: 15px 5%;
-  background: linear-gradient(to bottom, rgba(29, 39, 20, 0.9), transparent);
+  background: linear-gradient(to bottom, rgba(29, 39, 20, 0.9), transparent); /* Transparent gradient */
   z-index: 1000;
   transition: all 0.3s ease;
 }
 
+/* Logo style within the header */
 .logo {
   color: var(--text-color);
   text-decoration: none;
@@ -41,18 +46,21 @@ header {
   z-index: 1100;
 }
 
+/* Navigation menu and links */
 nav {
   display: flex;
   align-items: center;
 }
 
+/* Style for menu items and spacing */
 .menu {
   display: flex;
   list-style: none;
-  gap: 25px;
+  gap: 25px; /* Space between menu items */
   align-items: center;
 }
 
+/* Individual menu links */
 .menu li a {
   color: var(--text-color);
   text-decoration: none;
@@ -61,18 +69,21 @@ nav {
   transition: color 0.3s ease;
 }
 
+/* Hover effect for menu links */
 .menu li a:hover {
   color: var(--accent-color);
 }
 
-/* Hamburger Menu Styles */
+/* -- Hamburger Menu for Mobile -- */
+/* Initially hidden for larger screens */
 .hamburger {
-  display: none; /* Hidden by default on desktop */
+  display: none;
   flex-direction: column;
   cursor: pointer;
   z-index: 1200;
 }
 
+/* Style for hamburger menu lines */
 .hamburger span {
   width: 25px;
   height: 3px;
@@ -81,18 +92,19 @@ nav {
   transition: 0.4s;
 }
 
+/* Media Query for Mobile Navigation */
 @media screen and (max-width: 768px) {
   .hamburger {
-      display: flex;
+      display: flex; /* Show hamburger menu on smaller screens */
   }
 
   .menu {
       position: fixed;
       top: 0;
-      left: -100%;
+      left: -100%; /* Hidden off-screen by default */
       width: 100%;
       height: 100vh;
-      background-color: #2a525a;
+      background-color: #2a525a; /* Matches primary color */
       flex-direction: column;
       justify-content: center;
       align-items: center;
@@ -100,15 +112,16 @@ nav {
   }
 
   .menu.active {
-      left: 0;
+      left: 0; /* Slide-in effect for the menu */
   }
 
+  /* Animation for active hamburger menu */
   .hamburger.active span:nth-child(1) {
       transform: rotate(-45deg) translate(-5px, 6px);
   }
 
   .hamburger.active span:nth-child(2) {
-      opacity: 0;
+      opacity: 0; /* Hide the middle line */
   }
 
   .hamburger.active span:nth-child(3) {
@@ -116,10 +129,14 @@ nav {
   }
 }
 
+/* -- Main Content Section -- */
+/* Add space below the fixed header */
 main {
   padding-top: 100px;
 }
 
+/* -- Hero Section -- */
+/* Style for the full-screen hero area */
 .hero {
   position: relative;
   height: 80vh;
@@ -128,6 +145,7 @@ main {
   overflow: hidden;
 }
 
+/* Hero text content */
 .hero-content {
   position: absolute;
   z-index: 2;
@@ -146,6 +164,7 @@ main {
   color: var(--text-color);
 }
 
+/* Hero background image or video */
 .hero-image,
 .hero-video {
   position: absolute;
@@ -154,9 +173,11 @@ main {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  opacity: 0.5;
+  opacity: 0.5; /* Transparent overlay */
 }
 
+/* -- Band Story Section -- */
+/* Section with background and centered content */
 .band-story {
   padding: 80px 10%;
   background-color: var(--secondary-color);
@@ -174,17 +195,20 @@ main {
   margin-bottom: 20px;
 }
 
+/* -- Members Section -- */
 .members-section {
   padding: 80px 5%;
   background-color: var(--primary-color);
 }
 
+/* Grid layout for band members */
 .members-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 40px;
 }
 
+/* Style for individual member cards */
 .member-card {
   display: flex;
   align-items: center;
@@ -194,6 +218,7 @@ main {
   transition: transform 0.3s ease;
 }
 
+/* Hover effect for member cards */
 .member-card:hover {
   transform: scale(1.05);
 }
@@ -220,6 +245,7 @@ main {
   color: var(--secondary-color);
 }
 
+/* Footer */
 footer {
   background-color: var(--accent-color);
   padding: 20px;
@@ -252,6 +278,7 @@ footer {
   color: var(--text-color);
 }
 
+/* Mobile Layout*/
 @media (max-width: 1024px) {
   header {
     padding: 15px 20px;

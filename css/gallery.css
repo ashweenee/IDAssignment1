@@ -41,6 +41,7 @@ header {
   letter-spacing: 2px;
 }
 
+/* -- Nav Bar -- */
 nav {
   display: flex;
   align-items: center;
@@ -228,6 +229,7 @@ footer {
   color: #e0e4d8;
 }
 
+/* -- Mobile Layout -- */
 @media (max-width: 768px) {
   .footer-content {
     flex-direction: column;

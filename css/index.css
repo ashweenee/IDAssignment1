@@ -40,6 +40,7 @@ header {
   letter-spacing: 2px;
 }
 
+/* -- Nav Bar -- */
 nav {
   display: flex;
   align-items: center;
