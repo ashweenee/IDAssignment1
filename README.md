@@ -20,20 +20,20 @@ As a new listener, I want to learn about the band's history and achievements so 
 Event Organizer
 As an event organizer, I need an accurate list of upcoming tour dates and venues so that I can plan to attend or consider booking the band for an event.
 
-Features
 Features:
 Responsive Design: Adapts seamlessly to devices of all screen sizes.
 Interactive Hamburger Menu: Simplifies navigation for mobile users.
 Tour Details: Displays upcoming events with dates and venues in a card-based layout.
 Call to Action (CTA): Encourages fans to buy tickets for upcoming concerts.
 Footer with Social Media Links: Links to official DAY6 platforms like Instagram, Twitter, and YouTube.
+
 Future Enhancements:
 Add a fully functional backend to handle user feedback and concert ticket purchases.
 Enhance the gallery with a lightbox effect.
 Integrate a streaming API for DAY6’s music on platforms like Spotify or YouTube.
 Include a blog section for news and updates about the band.
 
-Technologies Used
+Technologies Used:
 HTML: Structure and content.
 CSS: Styling and layout (includes responsive design via media queries).
 JavaScript: Interactive features like the mobile hamburger menu.
@@ -42,14 +42,17 @@ External CDN: Used for faster font and icon loading.
 Google Chrome - Fully functional
 Microsoft Edge - Fully functional
 
+Validations:
+Full GitHub link cannot be cleared for validiation but when each file is checked, validations are cleared.
+
 Layouts:
 Website works well on both Desktop (1920x1080) and Mobile (375x667) 
 
-Media
+Media:
 All pictures came from the band's official website - https://day6.jype.com/
 My own concert pictures were used as well
 
-Acknowledgements
+Acknowledgements:
 DAY6 for their music and inspiration.
 FontAwesome for providing icons.
 Pinterest for their colour palettes and overall inspirtation
