@@ -35,12 +35,12 @@ Include a blog section for news and updates about the band.
 
 Technologies Used
 HTML: Structure and content.
-CSS: Styling and layout (includes responsive design via media queries).
+Normalize.css: Styling and layout
+CSS: Styling and layout
 JavaScript: Interactive features like the mobile hamburger menu.
 FontAwesome: Icons for social media links.
-External CDN: Used for faster font and icon loading.
-Google Chrome - Fully functional
-Microsoft Edge - Fully functional
+Google Chrome: Fully functional
+Microsoft Edge: Fully functional
 
 Layouts:
 Website works well on both Desktop (1920x1080) and Mobile (375x667) 
