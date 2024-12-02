@@ -108,7 +108,6 @@ nav {
       transform: rotate(45deg) translate(-5px, -6px);
   }
 }
-
 .contact-container {
   position: relative;
   min-height: 100vh;
@@ -117,8 +116,22 @@ nav {
   justify-content: center;
   align-items: center;
   padding: 100px 20px 50px;
+  overflow: hidden; /* Added to contain the background */
 }
 
+.contact-container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('../media/about_mainpic.jpg'); /* Note the relative path */
+  background-size: cover;
+  background-position: center;
+  opacity: 0.3; /* Adjust opacity as needed */
+  z-index: 1;
+}
 
 .contact-content {
   position: relative;
@@ -191,35 +204,10 @@ nav {
   color: #e0e4d8;
 }
 
-.contact-info {
-  position: relative;
-  z-index: 10;
-  margin-top: 30px;
-  text-align: center;
-  color: #e0e4d8;
-}
-
-.contact-details {
-  display: flex;
-  justify-content: center;
-  gap: 30px;
-  margin-top: 20px;
-}
-
-.contact-details p {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-
-.contact-details i {
-  color:  #9aa488;
-  font-size: 1.2rem;
-}
-
 footer {
   background-color: #9aa488;
   padding: 20px;
+  color: #2a525a;
 }
 
 .footer-content {
